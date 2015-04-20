@@ -1,4 +1,4 @@
-// Using matrix fast pow algorithm to calculate fib problem.
+// Using matrix fast pow algorithm to solve fib problem.
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -108,6 +108,11 @@ public:
         return values[i*col + j];
     }
 
+    virtual ~Matrix()
+    {
+        if(values != NULL)
+            free(values);
+    }
 };
 
 int main()
