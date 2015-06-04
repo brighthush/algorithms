@@ -1,4 +1,4 @@
-src=quick-sort.cpp
+src=qsort-list.cpp
 
 main : $(src)
 	g++ -o main $(src)
