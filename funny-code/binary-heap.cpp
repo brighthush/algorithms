@@ -66,6 +66,26 @@ void heapSort(int n)
     }
 }
 
+void upUpdate(int cur)
+{
+    while(cur > 1)
+    {
+        int root = cur / 2;
+        if(tree[root] > tree[cur])
+        {
+            mySwap(tree[root], tree[cur]);
+            cur = root;
+        }
+    }
+}
+
+void insertValue(int val)
+{
+    ++heapSize;
+    tree[heapSize] = val;
+    upUpdate(heapSize);
+}
+
 int main()
 {
     int n;
